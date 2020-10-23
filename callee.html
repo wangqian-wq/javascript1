@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function test(a, b, c){
+            console.log(arguments.callee.length);
+            console.log(test.length);
+            console.log(arguments.length);
+        }
+        test(1,2);
+
+        function test1(){
+            console.log(arguments.callee);
+        function test2(){
+            console.log(arguments.callee);
+        }
+        test2(); 
+        }
+        test1();
+        var sum = (function(n){
+            if(n <= 1){
+                return 1;
+            }
+            return n + arguments.callee(n - 1);
+        })(100);
+        console.log(sum);
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+         var a = '1';
+         function test(){
+             var a = '2';
+             this.a = '3';
+             console.log(a);
+         }
+         test();
+         new test();
+         var obj = {};
+        console.log(a);
+        console.log({} == {});
+        console.log(obj1 = obj);
+        console.log(obj1 == obj);
+
+        var b = 5;
+        function text(){
+            b = 0;
+            console.log(b);
+            console.log(this.b);
+            var b;
+            console.log(b);
+        }
+        text();
+        new text();
+    </script>
+</body>
+</html>
