@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var attendence = {
+            students: [],
+            total: 6,
+            join: function(name){
+                this.students.push(name);
+                if(this.students.length === this.total){
+                    console.log(name + '到课，学生已到齐');
+                }else{
+                    console.log(name + '到课，学生未到齐');
+                }
+            },
+            leave: function(name){
+                var idx = this.students.indexOf(name);
+                if(idx !== -1){
+                    this.students.splice(idx,1);
+                }
+                console.log(name + '早退');
+                console.log(this.students);
+            },
+            classOver: function(){
+                this.students = [];
+                console.log('已下课');
+            }
+        }
+        attendence.join('张三');
+        attendence.join('李四');
+        attendence.join('王五');
+        attendence.join('赵六');
+        attendence.join('吴七');
+        attendence.join('孙八');
+        attendence.leave('李四');
+        attendence.classOver();
+    </script>
+</body>
+</html>

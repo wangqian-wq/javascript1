@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+     var a = [];
+    var str = Object.prototype.toString.call(a);
+    if(str === '[object Array]'){
+        console.log('是数组');
+    }else{
+        console.log('不是数组');
+    }
+        Object.prototype = {
+            toString: function(){
+                a.toString();
+            }
+        }
+        var arr = new Array(1,2,3);
+        console.log(arr.toString());
+        console.log(arr);
+        console.log(Object.prototype.toString.call(arr));
+    </script>
+</body>
+</html>

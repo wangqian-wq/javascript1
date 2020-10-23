@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Handphone(color, brand){
+            this.color = color;
+            this.brand = brand;
+            this.screen = '19:9';
+            this.system = 'Android';
+        }
+        Handphone.prototype.rom = '64G';
+        Handphone.prototype.ram = '6G';
+        Handphone.prototype.call = function(){
+            console.log('I am calling somebody');
+        } 
+        var hp1 = new Handphone('red', '小米');
+        var hp2 = new Handphone('black', '华为');
+        console.log(hp1.rom);
+        console.log(hp2.ram);
+        hp2.call();
+        console.log(Handphone.prototype);
+    </script>
+</body>
+</html>

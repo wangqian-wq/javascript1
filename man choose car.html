@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function Car(opt){
+        this.brand = opt.brand;
+        this.color = opt.color;
+        this.displacement = opt.displacement;
+    }
+     function Person(opt){
+         this.name = opt.name;
+         this.age = opt.age;
+         this.income = opt.income;
+         this.selectCar = function(){
+             var myCar = new Car(opt.carOpt);
+             console.log(this.name + '挑选了一辆排量为' + myCar.displacement + '的' + myCar.color + myCar.brand);
+         }
+     }
+     var jone = new Person({
+         name: '约翰',
+         age: 29,
+         income: '20k',
+         carOpt: {
+             brand: '马自达',
+             color: '红色',
+             displacement: '2.0'
+         }
+     })
+     jone.selectCar();
+    </script>
+</body>
+</html>

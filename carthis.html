@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //hasOwnProperty
+        function Car(){
+            this.brand = 'Benz';
+            this.color = 'red';
+         
+        }  
+        Car.prototype = {
+            displacement: '3.0'
+        }     
+       
+       var car = new Car();
+      
+        console.log('displacement' in car);
+       
+        
+    </script>
+</body>
+</html>

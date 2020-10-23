@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var teacher = {
+            name:'张三',
+            age: 32,
+            sex:'男',
+            weight: 145,
+            weight: 130,
+            teach: function(){
+                console.log('I am teaching JavaScript');
+            },
+            smoke: function(){
+                console.log('I am smoking');
+            },
+            eat: function(){
+                console.log('I am having a dinner');
+            }       
+    }
+    teacher.address = '北京';
+    teacher.drink = function(){
+                console.log('I am drinking beer');
+            }
+    teacher.eat();
+    console.log(teacher);
+    delete teacher.address;
+    delete teacher.smoke;    
+</script>
+</body>
+</html>

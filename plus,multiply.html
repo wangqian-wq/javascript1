@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Compute(){
+            var args = arguments,
+                res;
+            this.plus = function(){
+                res = 0;
+                loop(arguments,'add', res);
+            }
+            this.times = function(){
+                res = 1;
+                loop(arguments,'mul', res);
+            }
+        function loop(args,method, res){
+            for(var i = 0; i < args.length; i++){
+                var item = args[i];
+                if(method === 'add'){
+                    res += item;
+                }else if(method === 'mul'){
+                    res *= item;
+                }
+            }
+            console.log(res);
+        }
+        }
+        var Compute = new Compute();
+        Compute.plus(2,4,6);
+        Compute.times(3,5,7);
+    </script>
+</body>
+</html>
